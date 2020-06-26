@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #10375c;
+  color: #f4f6ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #f4f6ff;
+  border: 0;
+  border-radius: 10px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px;
+  text-align-last: center;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.container {
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.showcase {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #838383;
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.showcase li small {
+  margin-left: 4px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.row:nth-of-type(3),
+.row:nth-last-of-type(4) {
+  margin-bottom: 22px;
+}
+
+/* .row:not(:nth-of-type(3)) .seat:nth-of-type(3) {
+  margin-right: 0px;
+} */
+
+.seat {
+  background-color: #127681;
+  width: 22px;
+  height: 20px;
+  margin: 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: #f3c623;
+}
+
+.seat.occupied {
+  background-color: #f4f6ff;
+}
+
+.seat:nth-of-type(3) {
+  margin-right: 22px;
+}
+
+.row:nth-of-type(2) .seat:nth-of-type(3),
+.row:nth-of-type(3) .seat:nth-of-type(3) {
+  margin-right: 5px;
+}
+
+.seat:nth-last-of-type(3) {
+  margin-left: 22px;
+}
+
+.row:nth-of-type(2) .seat:nth-last-of-type(3),
+.row:nth-of-type(3) .seat:nth-last-of-type(3) {
+  margin-left: 5px;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.screen {
+  background-color: #f4f6ff;
+  height: 150px;
+  width: 100%;
+  margin-bottom: 20px;
+  transform: rotateX(-30deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #f3c623;
+}
